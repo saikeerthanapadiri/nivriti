@@ -33,7 +33,6 @@ const breathingHint = document.getElementById("breathingHint");
 const progress = document.getElementById("progressFill");
 
 const stageTitle = document.getElementById("stageTitle");
-const stepIndicator = document.getElementById("stepIndicator");
 
 const steps = [
 
@@ -283,8 +282,6 @@ function showGrounding() {
 
     updateJourneyTracker(2);
 
-    stepIndicator.innerHTML = "Step 2 of 4";
-
     document.querySelector(".panic-container").style.display = "none";
 
     const section = document.getElementById("groundingSection");
@@ -331,8 +328,6 @@ function showComfortSection() {
 
     updateJourneyTracker(3);
 
-    stepIndicator.innerHTML = "Step 3 of 4";
-
     document.getElementById("groundingSection").classList.add("hidden");
 
     document.getElementById("comfortSection").classList.remove("hidden");
@@ -357,8 +352,6 @@ function newComfortMessage() {
 function showEmergencySection() {
 
     updateJourneyTracker(4);
-
-    stepIndicator.innerHTML = "Step 4 of 4";
 
     document.getElementById("comfortSection").classList.add("hidden");
 
