@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Breathe | Nivriti</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/animations.css}">
+
+</head>
+
+<body>
+
+<div class="leaf leaf1">🍃</div>
+<div class="leaf leaf2">🌿</div>
+<div class="leaf leaf3">🍂</div>
+
+<nav class="navbar">
+
+    <h1 class="logo">nivriti</h1>
+
+    <ul>
+
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/grounding}">Grounding</a></li>
+        <li><a th:href="@{/affirmations}">Affirmations</a></li>
+        <li><a th:href="@{/about}">Learn</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="breathing-page">
+
+    <h1 class="page-title">
+
+        Guided Breathing
+
+    </h1>
+
+    <p class="page-subtitle">
+
+        Follow the rhythm below. Let your breath become slow,
+        steady and gentle.
+
+    </p>
+
+    <div class="breathing-circle">
+
+        <span id="breathText">
+
+            Press Start
+
+        </span>
+
+    </div>
+
+    <button class="primary-btn"
+
+            onclick="startBreathing()">
+
+        Start Breathing
+
+    </button>
+
+    <div class="breathing-tip">
+
+        <h3>🌿 Gentle Reminder</h3>
+
+        <p>
+
+            Breathe in through your nose.
+
+            Hold softly.
+
+            Exhale slowly through your mouth.
+
+            There's no need to rush.
+
+        </p>
+
+    </div>
+
+</section>
+
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

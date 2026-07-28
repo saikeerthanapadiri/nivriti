@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ground Yourself | Nivriti</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/animations.css}">
+
+</head>
+
+<body>
+
+<div class="leaf leaf1">🍃</div>
+<div class="leaf leaf2">🌿</div>
+<div class="leaf leaf3">🍂</div>
+
+<nav class="navbar">
+
+    <h1 class="logo">nivriti</h1>
+
+    <ul>
+
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/breathe}">Breathe</a></li>
+        <li><a th:href="@{/affirmations}">Affirmations</a></li>
+        <li><a th:href="@{/about}">Learn</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="grounding-page">
+
+    <h1 class="page-title">
+
+        5-4-3-2-1 Grounding
+
+    </h1>
+
+    <p class="page-subtitle">
+
+        Bring your attention back to the present, one step at a time.
+
+    </p>
+
+    <div class="ground-card">
+
+        <div class="step-number">
+
+            Step <span id="stepCount">1</span> of 6
+
+        </div>
+
+        <h2 id="groundTitle">
+
+            👀 Find <strong>5 things</strong> you can SEE.
+
+        </h2>
+
+        <p id="groundDescription">
+
+            Take your time. Look around and notice five different objects,
+            colors, or details nearby.
+
+        </p>
+
+        <button class="primary-btn"
+
+                onclick="nextGrounding()">
+
+            Next →
+
+        </button>
+
+    </div>
+
+    <div class="progress-dots">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+</section>
+
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

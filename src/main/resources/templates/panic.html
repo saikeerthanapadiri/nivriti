@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panic Mode | Nivriti</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/animations.css}">
+
+</head>
+
+<body class="panic-page">
+
+<div class="leaf leaf1"></div>
+<div class="leaf leaf2"></div>
+<div class="leaf leaf3"></div>
+
+<nav class="navbar">
+
+    <div class="logo">
+        🌿 Nivriti
+    </div>
+
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/panic}" class="active">Panic Mode</a></li>
+        <li><a th:href="@{/learn}">Learn</a></li>
+    </ul>
+
+</nav>
+
+<section class="panic-container">
+
+    <div class="journey-status">
+
+        <div class="journey-status">
+
+    <div class="journey-tracker">
+
+        <div class="journey-step active" id="step1">
+
+            🌬<br>Breathing
+
+        </div>
+
+        <div class="journey-step" id="step2">
+
+            🌿<br>Grounding
+
+        </div>
+
+        <div class="journey-step" id="step3">
+
+            💜<br>Comfort
+
+        </div>
+
+        <div class="journey-step" id="step4">
+
+            📞<br>Help
+
+        </div>
+
+    </div>
+
+    <h1 id="stageTitle">
+
+        🌬 Guided Breathing
+
+    </h1>
+
+    <p id="stageDescription">
+
+        Stay with me. We are going to do this together.
+
+    </p>
+
+</div>
+
+    <div class="breathing-circle" id="breathingCircle">
+
+        <span id="breathText">
+
+            Inhale
+
+        </span>
+
+    </div>
+
+    <h2 id="countdown">
+
+        4
+
+    </h2>
+
+    <p id="breathingHint">
+
+        Through your nose...
+
+    </p>
+
+
+    <div class="progress-info">
+        <span>Your Progress</span>
+        <span id="progressText">0%</span>
+    </div>
+
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+
+    <div class="breathing-controls">
+
+        <button id="startPauseBtn" class="secondary-btn">
+            ⏸ Pause
+        </button>
+
+        <button id="skipButton" class="secondary-btn">
+            Skip to Grounding →
+        </button>
+
+</div>
+
+</section>
+
+<!-- Grounding -->
+
+<section id="groundingSection" class="hidden">
+
+    <div class="grounding-box">
+
+        <h1>
+
+            🌿 Ground Yourself
+
+        </h1>
+
+        <h2 id="groundingStep">
+
+            Look around.
+
+        </h2>
+
+        <p id="groundingInstruction">
+
+            Name 5 things you can SEE.
+
+        </p>
+
+        <button class="primary-btn" onclick="nextGroundingStep()">
+
+            Next
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Comfort -->
+
+<section id="comfortSection" class="hidden">
+
+    <div class="comfort-box">
+
+        <h1>
+
+            💜 You're Doing Great
+
+        </h1>
+
+        <div class="comfort-message" id="comfortMessage">
+
+            You are safe.
+
+        </div>
+
+        <button class="primary-btn" onclick="newComfortMessage()">
+
+            Another Message
+
+        </button>
+
+        <button class="secondary-btn" onclick="showEmergencySection()">
+
+            Continue
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Emergency -->
+
+<section id="emergencySection" class="hidden">
+
+    <div class="emergency-card">
+
+        <h1>
+
+            📞 Need Someone?
+
+        </h1>
+
+        <p>
+
+            If talking to someone would help, don't hesitate to reach out.
+
+        </p>
+
+        <div class="emergency-buttons">
+
+            <a href="tel:112" class="panic-button">
+
+                🚨 Call Emergency (112)
+
+            </a>
+
+            <button class="secondary-btn">
+
+                📞 My Emergency Contacts
+            </button>
+
+        </div>
+
+        <p class="ending-text">
+
+            🌿 You made it through this moment.
+            Remember, panic attacks always pass.
+
+        </p>
+
+        <a th:href="@{/}" class="primary-btn">
+
+            Return Home
+
+        </a>
+
+    </div>
+
+</section>
+
+<button id="calmModeButton" class="calm-mode">
+
+    🌙 Calm Mode
+
+</button>
+
+<button id="helpButton" class="floating-help">
+
+    🆘
+
+</button>
+
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

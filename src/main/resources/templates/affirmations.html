@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Affirmations | Nivriti</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/animations.css}">
+
+</head>
+
+<body>
+
+<div class="leaf leaf1">🍃</div>
+<div class="leaf leaf2">🌿</div>
+<div class="leaf leaf3">🍂</div>
+
+<nav class="navbar">
+
+    <h1 class="logo">nivriti</h1>
+
+    <ul>
+
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/breathe}">Breathe</a></li>
+        <li><a th:href="@{/grounding}">Grounding</a></li>
+        <li><a th:href="@{/about}">Learn</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="affirmation-page">
+
+    <h1 class="page-title">
+
+        Daily Affirmation
+
+    </h1>
+
+    <p class="page-subtitle">
+
+        Pause for a moment.
+        Read these words slowly.
+        Let them stay with you.
+
+    </p>
+
+    <div class="affirmation-card">
+
+        <div class="quote-mark">
+
+            “
+
+        </div>
+
+        <p id="affirmationText">
+
+            You are stronger than this moment.
+
+        </p>
+
+        <div class="quote-mark closing">
+
+            ”
+
+        </div>
+
+    </div>
+
+    <button class="primary-btn"
+
+            onclick="newAffirmation()">
+
+        Show Another Affirmation
+
+    </button>
+
+    <p class="affirmation-note">
+
+        💜 If today's affirmation speaks to you,
+        take a screenshot and revisit it whenever you need it.
+
+    </p>
+
+</section>
+
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Contacts | Nivriti</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">🌿 Nivriti</div>
+
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/panic}">Panic Mode</a></li>
+        <li><a th:href="@{/learn}">Learn</a></li>
+        <li><a th:href="@{/emergency}">Emergency</a></li>
+    </ul>
+
+</nav>
+
+<section class="contacts-page">
+
+    <h1>👥 Emergency Contacts</h1>
+
+    <p>
+        Save the people you trust most. These contacts are stored only on this device.
+    </p>
+
+    <div class="contact-form">
+
+        <input
+                type="text"
+                id="contactName"
+                placeholder="Contact Name">
+
+        <input
+                type="tel"
+                id="contactPhone"
+                placeholder="Phone Number">
+
+        <button
+                class="primary-btn"
+                onclick="saveContact()">
+
+            Save Contact
+
+        </button>
+
+    </div>
+
+    <div id="contactsList">
+
+    </div>
+
+</section>
+
+<button onclick="clearContacts()" class="secondary-btn">
+    Clear All Contacts
+</button>
+
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+
+
+</html>
