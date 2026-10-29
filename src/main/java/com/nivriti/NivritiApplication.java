@@ -8,6 +8,7 @@ public class NivritiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NivritiApplication.class, args);
+		// CI/CD lab: testing a new GitHub source-code change
 	}
 
 }
